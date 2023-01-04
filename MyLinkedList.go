@@ -4,20 +4,20 @@ import (
     "fmt"
 )
 
-// Node represents a node of linked list
+// This Node represtents a particular node of the linkedlist
 type Node struct {
 	value int
 	next  *Node
 }
 
-// LinkedList represents a linked list
+// LinkedList represents the entire linked list
 type LinkedList struct {
 	head *Node
 	len  int
 }
 
 
-// Insert inserts new node at the end of  from linked list
+// Insert inserts new node at the end of the linked list
 func (l *LinkedList) Insert(val int) {
 	n := Node{}
 	n.value = val
@@ -38,7 +38,7 @@ func (l *LinkedList) Insert(val int) {
 }
 
 
-// GetAt returns node at given position from linked list
+// GetAt returns node at given position of the linked list
 func (l *LinkedList) GetAt(pos int) *Node {
 	ptr := l.head
 	if pos < 0 {
@@ -81,7 +81,7 @@ func (l *LinkedList) InsertAt(pos int, value int) {
 }
 
 
-// Print displays all the nodes from linked list
+// Print displays all the nodes of the linked list
 func (l *LinkedList) Print() {
 	if l.len == 0 {
 		fmt.Println("No nodes in list")
